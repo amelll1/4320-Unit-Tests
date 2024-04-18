@@ -12,6 +12,7 @@ from main import preprocess_data
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
+#key
 
 def get_stock_symbols():
     stock_symbols = []
