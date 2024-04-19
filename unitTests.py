@@ -1,5 +1,5 @@
 import unittest
-from inputValidation import validate_symbol, validate_chart_type,validate_time_series
+from inputValidation import validate_symbol, validate_chart_type,validate_time_series,validate_date
 
 class TestInputValidation(unittest.TestCase):
     def test_validate_symbol(self):
@@ -21,5 +21,12 @@ class TestInputValidation(unittest.TestCase):
         self.assertTrue(validate_time_series('3'))  
         self.assertTrue(validate_time_series('4'))  
         self.assertFalse(validate_time_series('5')) 
+
+    def test_validate_date(self):
+        self.assertTrue(validate_date('2022-01-01'))  
+        self.assertFalse(validate_date('2022/01/01')) 
+
+if __name__ == '__main__':
+    unittest.main()
 
 
